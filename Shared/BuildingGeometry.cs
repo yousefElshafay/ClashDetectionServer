@@ -1,5 +1,6 @@
 using ClashDetectionServer.Models;
 namespace ClashDetectionServer.Shared;
+
 internal static class BuildingGeometry
 {
     public static bool Overlaps(Building a, Building b)

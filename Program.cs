@@ -23,8 +23,9 @@ builder.Services.AddScoped<IGlobalViolationRule, MinimumClearanceRule>();
 builder.Services.AddScoped<IZoningViolationRule, NightclubSchoolDistanceRule>();
 builder.Services.AddScoped<IZoningViolationRule, ResidentialDistanceRule>();
 builder.Services.AddScoped<ISpatialIndexService, BruteForceSpatialIndexService>();
+// builder.Services.AddScoped<ISpatialIndexService, UniformGridSpatialIndexService>();
 
- 
+
 
 var app = builder.Build();
 

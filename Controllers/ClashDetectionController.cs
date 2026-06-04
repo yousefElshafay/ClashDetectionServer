@@ -20,13 +20,11 @@ public class ClashDetectionController(IClashDetectionManager clashDetectionManag
                                                             Enum.Parse<BuildingType>(b.Type, true),
                                                             b.X,
                                                             b.Y,
-                                                            b.Length,
-                                                            b.Width)).ToList();
-       
+                                                            b.Width,
+                                                            b.Length
+                                                            )).ToList();
+
         var clashes = clashDetectionManager.Detect(sitePlan, buildings);
         return Ok(clashes);
     }
-
-
-
 }

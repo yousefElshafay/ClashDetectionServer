@@ -9,9 +9,9 @@ namespace ClashDetectionServer.Contracts.Requests;
 public class DetectClashesRequest
 {
     [Required(ErrorMessage = "Site plan is required")]
-    public  SitePlanRequest SitePlan { get; set; }
+    public SitePlanRequest SitePlan { get; set; }
 
     [Required(ErrorMessage = "Buildings are required")]
     [MinLength(1, ErrorMessage = "At least one building is required.")]
-    public  List<BuildingRequest> Buildings { get; set; } = [];
+    public List<BuildingRequest> Buildings { get; set; } = [];
 }

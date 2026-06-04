@@ -5,6 +5,6 @@ namespace ClashDetectionServer.Interfaces;
 
 public interface ISpatialIndexService
 {
-        void Build(IReadOnlyList<Building> buildings);
-        IReadOnlyList<Building> FindNearby(Building building, double radius);
+    void Build(IReadOnlyList<Building> buildings);
+    IReadOnlyList<Building> FindNearby(Building building, double radius);
 }

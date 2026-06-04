@@ -10,7 +10,7 @@ public class NightclubSchoolDistanceRule : IZoningViolationRule
     public IReadOnlyList<BuildingType> SourceBuildingTypes => [BuildingType.Nightclub];
     public IReadOnlyList<BuildingType> TargetBuildingTypes => [BuildingType.School];
     public double SearchRadius => MinimumDistance;
-    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan,Building building,IReadOnlyList<Building> nearbyBuildings)
+    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan, Building building, IReadOnlyList<Building> nearbyBuildings)
     {
         foreach (var nearby in nearbyBuildings)
         {

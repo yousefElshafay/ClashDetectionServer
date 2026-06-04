@@ -3,14 +3,12 @@ using ClashDetectionServer.Interfaces;
 using ClashDetectionServer.Models;
 using ClashDetectionServer.Shared;
 namespace ClashDetectionServer.Rules.Global;
+
 public class NoOverlapRule : IGlobalViolationRule
 {
     public bool RequiresNearbyBuildings => true;
     public double? SearchRadius => 0;
-    public IEnumerable<ViolationDto> Evaluate(
-        SitePlan sitePlan,
-        Building building,
-        IReadOnlyList<Building> nearbyBuildings)
+    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan, Building building, IReadOnlyList<Building> nearbyBuildings)
     {
         foreach (var nearby in nearbyBuildings)
         {

@@ -8,7 +8,7 @@ public class SitePlan
         Width = width;
         Length = length;
     }
-    public double Width { get;  }
+    public double Width { get; }
 
     public double Length { get; }
 }

@@ -11,9 +11,9 @@ public class MinimumClearanceRule : IGlobalViolationRule
 
     public double? SearchRadius => MinimumDistance; // Define a search radius for nearby buildings
 
-    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan,Building building, IReadOnlyList<Building> NearBybuildings)
+    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan, Building building, IReadOnlyList<Building> NearBybuildings)
     {
-       foreach (var nearby in NearBybuildings)
+        foreach (var nearby in NearBybuildings)
         {
             if (building.Id.CompareTo(nearby.Id) >= 0)
                 continue; // Skip self

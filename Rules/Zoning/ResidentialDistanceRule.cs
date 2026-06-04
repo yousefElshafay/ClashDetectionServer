@@ -3,13 +3,14 @@ using ClashDetectionServer.Interfaces;
 using ClashDetectionServer.Models;
 using ClashDetectionServer.Shared;
 namespace ClashDetectionServer.Rules.Zoning;
+
 public class ResidentialDistanceRule : IZoningViolationRule
 {
     private const double MinimumDistance = 150;
     public IReadOnlyList<BuildingType> SourceBuildingTypes => [BuildingType.ResidentialBuilding];
     public IReadOnlyList<BuildingType> TargetBuildingTypes => [BuildingType.Stadium, BuildingType.Nightclub];
     public double SearchRadius => MinimumDistance;
-    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan,Building building,IReadOnlyList<Building> nearbyBuildings)
+    public IEnumerable<ViolationDto> Evaluate(SitePlan sitePlan, Building building, IReadOnlyList<Building> nearbyBuildings)
     {
         foreach (var nearby in nearbyBuildings)
         {

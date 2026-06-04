@@ -8,6 +8,7 @@ namespace ClashDetectionServer.Services;
 
 public class BruteForceSpatialIndexService : ISpatialIndexService
 {
+    // this is o(n^2) and should be replaced with a more efficient spatial index for larger datasets
     private IReadOnlyList<Building> buildings = [];
     public void Build(IReadOnlyList<Building> buildings)
     {
