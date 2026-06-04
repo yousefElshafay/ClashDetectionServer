@@ -5,7 +5,6 @@ using ClashDetectionServer.Rules.Zoning;
 using ClashDetectionServer.Services;
 using System.Text.Json.Serialization;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,8 +23,6 @@ builder.Services.AddScoped<IZoningViolationRule, NightclubSchoolDistanceRule>();
 builder.Services.AddScoped<IZoningViolationRule, ResidentialDistanceRule>();
 builder.Services.AddScoped<ISpatialIndexService, BruteForceSpatialIndexService>();
 // builder.Services.AddScoped<ISpatialIndexService, UniformGridSpatialIndexService>();
-
-
 
 var app = builder.Build();
 
